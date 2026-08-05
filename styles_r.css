@@ -42,7 +42,7 @@ body {
 }
 
 .nav {
-    max-width: var(--content-width);
+    max-width: 56rem;
     margin: 0 auto;
     padding: 1rem 1.5rem;
     display: flex;
@@ -61,7 +61,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.75rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -70,6 +70,8 @@ body {
 .nav-links a {
     color: var(--accent);
     text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
     transition: color 0.2s ease;
 }
 
@@ -163,6 +165,9 @@ main {
 }
 
 .timeline-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
     padding: 0 0 1.75rem 1.25rem;
     border-left: 2px solid rgba(27, 160, 152, 0.35);
     margin-left: 0.25rem;
@@ -170,6 +175,21 @@ main {
 
 .timeline-item:last-child {
     padding-bottom: 0;
+}
+
+.timeline-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 6px;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    min-width: 0;
 }
 
 .timeline-item h3 {
@@ -189,6 +209,11 @@ main {
     font-size: 0.9rem;
     font-style: italic;
     margin: 0.15rem 0 0.6rem;
+}
+
+.timeline-item p strong {
+    font-weight: 700;
+    color: var(--accent-dark);
 }
 
 /* ---------- Education ---------- */
@@ -225,6 +250,109 @@ main {
     display: block;
     color: var(--ink-soft);
     font-size: 0.95rem;
+}
+
+/* ---------- Projects ---------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.75rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-media {
+    background-color: rgba(27, 160, 152, 0.08);
+    aspect-ratio: 4 / 3;
+}
+
+.project-media video,
+.project-media img,
+.project-media iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border: 0;
+}
+
+/* Image gallery: split the media area into equal columns */
+.project-gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 2px;
+}
+
+.project-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+}
+
+.project-desc {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-tags li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    background-color: rgba(27, 160, 152, 0.12);
+    color: var(--accent-dark);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.project-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
 }
 
 /* ---------- Skills ---------- */
