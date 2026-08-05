@@ -526,17 +526,14 @@
                     setActive(sections[sections.length - 1].id);
                     return;
                 }
-                const vh = window.innerHeight;
-                let best = sections[0], bestVisible = -1;
+                const line = window.innerHeight * 0.55;
+                let active = sections[0];
                 for (let i = 0; i < sections.length; i++) {
-                    const r = sections[i].getBoundingClientRect();
-                    const visible = Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0));
-                    if (visible >= bestVisible) {
-                        bestVisible = visible;
-                        best = sections[i];
+                    if (sections[i].getBoundingClientRect().top <= line) {
+                        active = sections[i];
                     }
                 }
-                setActive(best.id);
+                setActive(active.id);
             }
             window.addEventListener('scroll', update, { passive: true });
             window.addEventListener('resize', update);
