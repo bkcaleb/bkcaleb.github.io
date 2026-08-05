@@ -522,6 +522,10 @@
                 if (map[id]) map[id].classList.add('active');
             }
             function update() {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+                    setActive(sections[sections.length - 1].id);
+                    return;
+                }
                 const vh = window.innerHeight;
                 let best = sections[0], bestVisible = -1;
                 for (let i = 0; i < sections.length; i++) {
