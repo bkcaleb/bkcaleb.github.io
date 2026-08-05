@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Caleb Lee, Software Engineer. UCLA Computer Science graduate passionate about AI and game development.">
     <title>Caleb Lee, Software Engineer</title>
+    <meta name="description" content="Caleb Lee, Software Engineer. Computer Science graduate passionate about AI and game development, with experience at Amazon Music.">
+    <meta name="author" content="Caleb Lee">
+    <meta name="keywords" content="Caleb Lee, Software Engineer, AI, Machine Learning, Game Development, Amazon Music, Computer Science, UCLA, portfolio">
+    <link rel="canonical" href="https://bkcaleb.github.io/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bkcaleb.github.io/">
+    <meta property="og:title" content="Caleb Lee, Software Engineer">
+    <meta property="og:description" content="Software Engineer passionate about AI and game development, with experience at Amazon Music.">
+    <meta property="og:image" content="https://bkcaleb.github.io/pictures/IMG_7371.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Caleb Lee, Software Engineer">
+    <meta name="twitter:description" content="Software Engineer passionate about AI and game development, with experience at Amazon Music.">
+    <meta name="twitter:image" content="https://bkcaleb.github.io/pictures/IMG_7371.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Open+Sans:wght@400;600;700&family=Zeyada&display=swap" rel="stylesheet">
@@ -160,9 +175,8 @@
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Dog/Cat Classifier</h3>
-                        <p class="project-desc">An image classification and segmentation model built
-                            in TensorFlow on the Oxford Pet Dataset. It distinguishes cats from dogs
-                            and further classifies them by breed, reaching 95%+ accuracy. Developed
+                        <p class="project-desc">A TensorFlow model that classifies cats vs. dogs and
+                            their breeds on the Oxford Pet Dataset, reaching 95%+ accuracy. Built
                             during my research internship at the IRIS Lab, SKKU.</p>
                         <ul class="project-tags">
                             <li>Python</li>
@@ -170,6 +184,7 @@
                             <li>Jupyter</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="dogcat"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="https://github.com/bkcaleb/Personal_Projects/blob/main/Image_Classification_oxford_pets.ipynb" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -181,15 +196,15 @@
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Arduino iPod</h3>
-                        <p class="project-desc">An Arduino-based music player that lets users choose
-                            between 3 manually translated songs. Won 2nd place in the IEEE Open
-                            Project Space competition.</p>
+                        <p class="project-desc">An Arduino-based music player with a click-wheel
+                            interface. Won 2nd place in the IEEE Open Project Space competition.</p>
                         <ul class="project-tags">
                             <li>Arduino</li>
                             <li>C++</li>
                             <li>Embedded</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="arduino"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="https://youtu.be/07F-9BXAiGM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> Video</a>
                         </div>
                     </div>
@@ -201,9 +216,8 @@
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Vampire Survive</h3>
-                        <p class="project-desc">A survival game written in C++ where the player moves
-                            around an arena avoiding and outlasting vampires, built using
-                            object-oriented design across Player, Vampire, Arena, and History
+                        <p class="project-desc">A C++ arena survival game where the player outlasts
+                            vampires. Built with object-oriented design across multiple interacting
                             classes.</p>
                         <ul class="project-tags">
                             <li>C++</li>
@@ -211,6 +225,7 @@
                             <li>Data Structures</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="vampire"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="https://github.com/bkcaleb/Class_Projects/tree/main/CS32/project%201" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
                         </div>
                     </div>
@@ -222,12 +237,9 @@
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">SpaceDash</h3>
-                        <p class="project-desc">A Temple Run-inspired game set in outer space where
-                            players dodge 10+ flying asteroids while running through an endless track.
-                            Proposed and led development in 2 weeks, building it with 2,000+ lines of
-                            JavaScript and WebGL. Implemented dynamic road generation plus object
-                            creation for the character model, 3 perks, 20 asteroids, and 50+ unique
-                            lighting effects, with animation and physics throughout.</p>
+                        <p class="project-desc">A Temple Run-inspired 3D endless runner set in outer
+                            space, built from scratch in JavaScript and WebGL. Led development in 2
+                            weeks with dynamic track generation, physics, and animation.</p>
                         <ul class="project-tags">
                             <li>JavaScript</li>
                             <li>WebGL</li>
@@ -236,6 +248,7 @@
                             <li>Animation</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="spacedash"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Add link</a>
                         </div>
                     </div>
@@ -254,6 +267,7 @@
                             <li>Computer Vision</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="carplate"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Add link</a>
                         </div>
                     </div>
@@ -266,14 +280,15 @@
                     <div class="project-body">
                         <h3 class="project-title">Emergency Detector</h3>
                         <p class="project-desc"><strong>Golden time is the key.</strong> A camera-based
-                            system that detects whether a movement is emergency-worthy, such as
-                            falling down the stairs, and alerts 911 instantly.</p>
+                            system that detects emergency-worthy movements, like falling down the
+                            stairs, and alerts 911 instantly.</p>
                         <ul class="project-tags">
                             <li>Python</li>
                             <li>Computer Vision</li>
                             <li>Machine Learning</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="emergency"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Add link</a>
                         </div>
                     </div>
@@ -285,15 +300,15 @@
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Free for Sale</h3>
-                        <p class="project-desc">A marketplace app that fixes what makes Facebook
-                            Marketplace frustrating: newer posts constantly bury older ones, so items
-                            get lost. We added categories and a cleaner model so posts never get lost,
-                            and integrated the Google Maps API to show where each seller is located.</p>
+                        <p class="project-desc">A marketplace app that fixes Facebook Marketplace's
+                            biggest annoyance, posts getting buried and lost. Adds categories and a
+                            Google Maps view of each seller's location.</p>
                         <ul class="project-tags">
                             <li>Full-Stack</li>
                             <li>Google Maps API</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="freeforsale"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Add link</a>
                         </div>
                     </div>
@@ -305,16 +320,16 @@
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Pitch Guesser</h3>
-                        <p class="project-desc">A guessing game where the user identifies the pitch
-                            playing from a device. Players tilt the device to move the pitch up or
-                            down, with animations and sounds that respond to whether they got it right
-                            or wrong.</p>
+                        <p class="project-desc">A guessing game where players identify the pitch
+                            playing from a device. Tilt to change the pitch, with animations and
+                            sounds reacting to right and wrong answers.</p>
                         <ul class="project-tags">
                             <li>Audio</li>
                             <li>Signal Processing</li>
                             <li>Motion Sensors</li>
                         </ul>
                         <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="pitch"><i class="fa-solid fa-book-open"></i> Read more</button>
                             <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i> Add link</a>
                         </div>
                     </div>
@@ -322,6 +337,30 @@
 
             </div>
         </section>
+
+        <div id="case-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="case-title">
+            <div class="modal-content">
+                <button type="button" class="modal-close" aria-label="Close">&times;</button>
+                <h3 id="case-title"></h3>
+                <p class="modal-meta" id="case-meta"></p>
+                <div class="case-block">
+                    <h4>Problem</h4>
+                    <p id="case-problem"></p>
+                </div>
+                <div class="case-block">
+                    <h4>Approach</h4>
+                    <p id="case-approach"></p>
+                </div>
+                <div class="case-block">
+                    <h4>Challenge</h4>
+                    <p id="case-challenge"></p>
+                </div>
+                <div class="case-block">
+                    <h4>Outcome</h4>
+                    <p id="case-outcome"></p>
+                </div>
+            </div>
+        </div>
 
         <section id="skills" class="section reveal">
             <h2>Skills</h2>
@@ -554,6 +593,119 @@
                 card.addEventListener('mouseleave', function () {
                     card.style.transform = '';
                 });
+            });
+        })();
+
+        (function caseStudies() {
+            const cases = {
+                spacedash: {
+                    title: 'Space Dash',
+                    meta: 'UCLA · Mar 2023 · JavaScript, WebGL',
+                    problem: 'For a computer graphics course I wanted to build something that showed off real-time 3D rendering rather than a static scene, so I set out to make a playable, endless game in the browser within a two-week deadline.',
+                    approach: 'I proposed and led a Temple Run-inspired endless runner set in outer space, built from scratch in 2,000+ lines of JavaScript and WebGL. I implemented dynamic road generation that creates and deletes track segments on the fly, plus object creation for the character model, 3 perks, 20 asteroids, and 50+ unique lighting effects, all driven by animation and physics.',
+                    challenge: 'Keeping the framerate smooth while continuously spawning geometry was the hard part. Naively generating an infinite track floods memory, so I created and recycled road segments behind the scenes as the player advanced, keeping only what was near the camera alive.',
+                    outcome: 'A fully playable 3D endless runner delivered on time, with players dodging 10+ flying asteroids on a procedurally generated track, demonstrating real-time rendering, game physics, and performance-minded scene management.'
+                },
+                dogcat: {
+                    title: 'Dog/Cat Classifier',
+                    meta: 'IRIS Lab, SKKU · 2021 · Python, TensorFlow',
+                    problem: 'During my research internship at the IRIS Lab, I wanted to build practical fluency in deep learning by taking an image model from raw dataset to trained, evaluated results.',
+                    approach: 'I built image classification and segmentation models in TensorFlow (Python, Google Colab) on the Oxford Pet Dataset, first distinguishing cats from dogs, then classifying further by breed, using dense and sequential architectures with fine-tuning.',
+                    challenge: 'Breed-level classification is much harder than cat-vs-dog because breeds look alike and the dataset is limited. I iterated on model architecture and fine-tuning to push accuracy up without overfitting.',
+                    outcome: 'Reached 95%+ accuracy on image classification and a 0.0435 loss on localization. The project deepened my understanding of the theory-to-practice gap in AI, and I also edited 50+ research papers toward publication standards.'
+                },
+                arduino: {
+                    title: 'Arduino iPod',
+                    meta: 'IEEE · Dec 2019 · Arduino, C++',
+                    problem: 'For the IEEE Open Project Space competition, our team set out to recreate the experience of a classic click-wheel iPod on real Arduino hardware.',
+                    approach: 'We built an Arduino-based music player with menu navigation and audio playback, letting users choose between 3 manually translated songs, wiring the hardware and writing the embedded control logic in C++.',
+                    challenge: 'Working within the memory and processing limits of an Arduino meant carefully managing how audio and the interface ran together on constrained hardware.',
+                    outcome: 'The finished device won 2nd place in the IEEE Open Project Space competition. A video walkthrough of it in action is linked on the card.'
+                },
+                vampire: {
+                    title: 'Vampire Survive',
+                    meta: 'UCLA CS32 · C++',
+                    problem: 'The goal was to design a playable survival game entirely in C++, using it as a vehicle to practice clean object-oriented architecture rather than reaching for a game engine.',
+                    approach: 'The player moves around an arena trying to avoid and outlast vampires. I modeled the game as a set of interacting objects, a Player, Vampire, Arena, and History, each with clear responsibilities, so movement, collision, and game state stayed decoupled and easy to reason about.',
+                    challenge: 'The trickiest part was managing the relationships and state between many moving actors without the classes becoming tangled. Careful separation of responsibilities across the Player, Vampire, Arena, and History classes kept the logic maintainable as the ruleset grew.',
+                    outcome: 'A complete, playable C++ arena survival game that demonstrates object-oriented design, encapsulation, and data-structure fundamentals. The source is available on GitHub.'
+                },
+                carplate: {
+                    title: 'Car Plate Detector',
+                    meta: 'Computer Vision · Python',
+                    problem: 'I wanted to build a practical computer-vision pipeline that could take an ordinary photo of a car and automatically locate and read its license plate.',
+                    approach: 'Using Python and computer-vision techniques, the system first isolates the plate region within an image, then processes that region to recognize the characters on the plate.',
+                    challenge: 'Real-world photos vary widely in angle, lighting, and background clutter, which makes reliably isolating the plate before reading it the hard part. Getting the detection stage robust enough was key to the recognition stage working at all.',
+                    outcome: 'A working pipeline that detects and reads license plates from images, the kind of foundation used in parking, tolling, and security systems.'
+                },
+                emergency: {
+                    title: 'Emergency Detector',
+                    meta: 'Computer Vision · Machine Learning · Python',
+                    problem: 'In an emergency like a fall, the "golden time", the first moments when help matters most, is often lost because no one is there to react. We wanted a system that could recognize a crisis and respond on its own.',
+                    approach: 'We built a camera-based system that watches for movements that look emergency-worthy, such as a person falling down the stairs, and, on detecting one, alerts 911 instantly without waiting for a human to notice.',
+                    challenge: 'The hard problem is telling a genuine emergency apart from ordinary motion, you want to catch a real fall while avoiding false alarms that would erode trust in the system.',
+                    outcome: 'A proof-of-concept that turns a passive camera into an active safety monitor, detecting emergency movements and triggering an instant 911 alert to protect that critical golden time.'
+                },
+                freeforsale: {
+                    title: 'Free for Sale',
+                    meta: 'Full-Stack · Google Maps API',
+                    problem: 'Facebook Marketplace can get frustrating fast: newer posts constantly push older ones out of view, so listings get buried and effectively lost, and it is hard to tell where a seller actually is.',
+                    approach: 'We built a marketplace app with a cleaner listing model and categories so posts stay findable instead of vanishing under newer ones. We integrated the Google Maps API so buyers can see where each seller is located at a glance.',
+                    challenge: 'The core design problem was structuring listings so that content stays discoverable over time rather than decaying by recency, while layering in location data cleanly through the Maps integration.',
+                    outcome: 'A marketplace experience where posts never get lost and location is front-and-center, directly addressing the two biggest pain points of existing platforms.'
+                },
+                pitch: {
+                    title: 'Pitch Guesser',
+                    meta: 'Audio · Signal Processing · Motion Sensors',
+                    problem: 'I wanted to turn ear training into a game, something interactive that uses a phone’s hardware to make guessing musical pitch fun rather than a dry exercise.',
+                    approach: 'The user listens to a pitch playing from the device and has to guess it by tilting the device up or down to move through the pitch range. Animations and sounds respond in real time depending on whether the guess is right or wrong.',
+                    challenge: 'Mapping the device’s tilt smoothly onto pitch selection, and syncing the audio and visual feedback so the game felt responsive and satisfying, was the main design and signal-handling challenge.',
+                    outcome: 'A playful, motion-controlled ear-training game that combines audio, signal processing, and device motion into a single interactive experience.'
+                }
+            };
+
+            const modal = document.getElementById('case-modal');
+            if (!modal) return;
+            const fields = {
+                title: document.getElementById('case-title'),
+                meta: document.getElementById('case-meta'),
+                problem: document.getElementById('case-problem'),
+                approach: document.getElementById('case-approach'),
+                challenge: document.getElementById('case-challenge'),
+                outcome: document.getElementById('case-outcome')
+            };
+            let lastFocused = null;
+
+            function open(key) {
+                const data = cases[key];
+                if (!data) return;
+                fields.title.textContent = data.title;
+                fields.meta.textContent = data.meta;
+                fields.problem.textContent = data.problem;
+                fields.approach.textContent = data.approach;
+                fields.challenge.textContent = data.challenge;
+                fields.outcome.textContent = data.outcome;
+                lastFocused = document.activeElement;
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                modal.querySelector('.modal-close').focus();
+            }
+
+            function close() {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+                if (lastFocused) lastFocused.focus();
+            }
+
+            document.querySelectorAll('.case-study-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () { open(btn.getAttribute('data-case')); });
+            });
+            modal.querySelector('.modal-close').addEventListener('click', close);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) close();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.classList.contains('open')) close();
             });
         })();
     </script>
