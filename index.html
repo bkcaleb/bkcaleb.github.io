@@ -521,22 +521,18 @@
                 links.forEach(function (l) { l.classList.remove('active'); });
                 if (map[id]) map[id].classList.add('active');
             }
-            function atBottom() {
-                return window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
-            }
             function update() {
-                if (atBottom()) {
-                    setActive(sections[sections.length - 1].id);
-                    return;
-                }
-                const line = window.innerHeight * 0.3;
-                let active = sections[0];
+                const vh = window.innerHeight;
+                let best = sections[0], bestVisible = -1;
                 for (let i = 0; i < sections.length; i++) {
-                    if (sections[i].getBoundingClientRect().top <= line) {
-                        active = sections[i];
+                    const r = sections[i].getBoundingClientRect();
+                    const visible = Math.max(0, Math.min(r.bottom, vh) - Math.max(r.top, 0));
+                    if (visible >= bestVisible) {
+                        bestVisible = visible;
+                        best = sections[i];
                     }
                 }
-                setActive(active.id);
+                setActive(best.id);
             }
             window.addEventListener('scroll', update, { passive: true });
             window.addEventListener('resize', update);
