@@ -89,7 +89,7 @@
             <h2>Experiences</h2>
             <ul class="timeline">
                 <li class="timeline-item">
-                    <img src="pictures/logos/amazon-music.jpg" alt="Amazon Music logo" class="timeline-logo">
+                    <img src="pictures/logos/amazon-music.jpg" alt="Amazon Music logo" class="timeline-logo timeline-logo-fill">
                     <div class="timeline-content">
                     <h3>Software Engineer Intern <span class="timeline-org">· Amazon Music</span></h3>
                     <p class="timeline-date">May 2026 – Aug 2026 · Los Angeles, CA</p>
@@ -109,7 +109,7 @@
                     </div>
                 </li>
                 <li class="timeline-item">
-                    <img src="pictures/logos/amazon-music.jpg" alt="Amazon Music logo" class="timeline-logo">
+                    <img src="pictures/logos/amazon-music.jpg" alt="Amazon Music logo" class="timeline-logo timeline-logo-fill">
                     <div class="timeline-content">
                     <h3>Software Engineer Intern <span class="timeline-org">· Amazon Music</span></h3>
                     <p class="timeline-date">May 2025 – Aug 2025 · Los Angeles, CA</p>
@@ -365,32 +365,32 @@
         <section id="skills" class="section reveal">
             <h2>Skills</h2>
             <ul class="skills-list">
-                <li>C / C++</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>HTML / CSS</li>
-                <li>React Native</li>
-                <li>React</li>
-                <li>GraphQL</li>
-                <li>Android</li>
-                <li>iOS</li>
-                <li>SQL</li>
-                <li>MATLAB</li>
-                <li>OCaml</li>
-                <li>Assembly</li>
-                <li>Verilog</li>
-                <li>Prolog</li>
-                <li>Scheme</li>
-                <li>Machine Learning</li>
-                <li>Deep Learning</li>
-                <li>Artificial Intelligence</li>
-                <li>Computer Vision</li>
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-                <li>A/B Testing</li>
-                <li>Linux / Bash</li>
-                <li>Git</li>
+                <li style="--i: 0">C / C++</li>
+                <li style="--i: 1">Java</li>
+                <li style="--i: 2">Python</li>
+                <li style="--i: 3">JavaScript</li>
+                <li style="--i: 4">HTML / CSS</li>
+                <li style="--i: 5">React Native</li>
+                <li style="--i: 6">React</li>
+                <li style="--i: 7">GraphQL</li>
+                <li style="--i: 8">Android</li>
+                <li style="--i: 9">iOS</li>
+                <li style="--i: 10">SQL</li>
+                <li style="--i: 11">MATLAB</li>
+                <li style="--i: 12">OCaml</li>
+                <li style="--i: 13">Assembly</li>
+                <li style="--i: 14">Verilog</li>
+                <li style="--i: 15">Prolog</li>
+                <li style="--i: 16">Scheme</li>
+                <li style="--i: 17">Machine Learning</li>
+                <li style="--i: 18">Deep Learning</li>
+                <li style="--i: 19">Artificial Intelligence</li>
+                <li style="--i: 20">Computer Vision</li>
+                <li style="--i: 21">TensorFlow</li>
+                <li style="--i: 22">PyTorch</li>
+                <li style="--i: 23">A/B Testing</li>
+                <li style="--i: 24">Linux / Bash</li>
+                <li style="--i: 25">Git</li>
             </ul>
         </section>
 
@@ -676,7 +676,9 @@
             };
             let lastFocused = null;
 
-            function open(key) {
+            const closeBtn = modal.querySelector('.modal-close');
+
+            function openModal(key) {
                 const data = cases[key];
                 if (!data) return;
                 fields.title.textContent = data.title;
@@ -688,24 +690,40 @@
                 lastFocused = document.activeElement;
                 modal.classList.add('open');
                 document.body.style.overflow = 'hidden';
-                modal.querySelector('.modal-close').focus();
+                closeBtn.focus();
             }
 
-            function close() {
+            function closeModal() {
                 modal.classList.remove('open');
                 document.body.style.overflow = '';
                 if (lastFocused) lastFocused.focus();
             }
 
+            function trapFocus(e) {
+                if (e.key !== 'Tab') return;
+                const focusable = modal.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+                if (!focusable.length) return;
+                const first = focusable[0], last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+
             document.querySelectorAll('.case-study-btn').forEach(function (btn) {
-                btn.addEventListener('click', function () { open(btn.getAttribute('data-case')); });
+                btn.addEventListener('click', function () { openModal(btn.getAttribute('data-case')); });
             });
-            modal.querySelector('.modal-close').addEventListener('click', close);
+            closeBtn.addEventListener('click', closeModal);
             modal.addEventListener('click', function (e) {
-                if (e.target === modal) close();
+                if (e.target === modal) closeModal();
             });
             document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('open')) close();
+                if (!modal.classList.contains('open')) return;
+                if (e.key === 'Escape') closeModal();
+                else trapFocus(e);
             });
         })();
     </script>
