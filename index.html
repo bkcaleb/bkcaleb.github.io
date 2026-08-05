@@ -513,25 +513,34 @@
                 if (section) map[id] = link;
             });
             const sections = Object.keys(map).map(function (id) { return document.getElementById(id); });
-            if (!sections.length || !('IntersectionObserver' in window)) return;
+            if (!sections.length) return;
+            let currentId = null;
             function setActive(id) {
+                if (id === currentId) return;
+                currentId = id;
                 links.forEach(function (l) { l.classList.remove('active'); });
                 if (map[id]) map[id].classList.add('active');
             }
-            const observer = new IntersectionObserver(function (entries) {
-                if (atBottom()) return;
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) setActive(entry.target.id);
-                });
-            }, { rootMargin: '-45% 0px -50% 0px' });
-            sections.forEach(function (s) { observer.observe(s); });
-
             function atBottom() {
                 return window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
             }
-            window.addEventListener('scroll', function () {
-                if (atBottom()) setActive(sections[sections.length - 1].id);
-            }, { passive: true });
+            function update() {
+                if (atBottom()) {
+                    setActive(sections[sections.length - 1].id);
+                    return;
+                }
+                const line = window.innerHeight * 0.3;
+                let active = sections[0];
+                for (let i = 0; i < sections.length; i++) {
+                    if (sections[i].getBoundingClientRect().top <= line) {
+                        active = sections[i];
+                    }
+                }
+                setActive(active.id);
+            }
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
         })();
 
         (function cardTilt() {
