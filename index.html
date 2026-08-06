@@ -256,6 +256,27 @@
 
                 <article class="project-card">
                     <div class="project-media">
+                        <img src="projects/img/ruinescape.svg" alt="RuinEscape 3D escape game" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">RuinEscape</h3>
+                        <p class="project-desc">A 3D horror-escape game built in Unity where you
+                            collect keys to escape a maze while evading a patrolling Warden. A team
+                            project where I built the full UI, artifact system, and audio.</p>
+                        <ul class="project-tags">
+                            <li>Unity</li>
+                            <li>C#</li>
+                            <li>Game Dev</li>
+                            <li>3D</li>
+                        </ul>
+                        <div class="project-links">
+                            <button type="button" class="case-study-btn" data-case="ruinescape"><i class="fa-solid fa-book-open"></i> Read more</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
                         <img src="projects/img/car-plate.webp" alt="Car license plate detection project" loading="lazy">
                     </div>
                     <div class="project-body">
@@ -651,6 +672,14 @@
                     approach: 'We built a marketplace app with a cleaner listing model and categories so posts stay findable instead of vanishing under newer ones. We integrated the Google Maps API so buyers can see where each seller is located at a glance.',
                     challenge: 'The core design problem was structuring listings so that content stays discoverable over time rather than decaying by recency, while layering in location data cleanly through the Maps integration.',
                     outcome: 'A marketplace experience where posts never get lost and location is front-and-center, directly addressing the two biggest pain points of existing platforms.'
+                },
+                ruinescape: {
+                    title: 'RuinEscape',
+                    meta: 'Unity · C# · Team of 4',
+                    problem: 'Our team (ToSoftware) set out to build a complete 3D game in Unity: a tense escape experience where the player must find three keys and reach the exit of a maze while a Warden hunts them down.',
+                    approach: 'The game combines stealth and resource management, players choose an artifact each run (each with tradeoffs like faster movement but no jumping), manage Fuel and Insanity bars, avoid flaming-spike traps, and use hiding spots to evade a Warden driven by a patrol/chase/search AI state machine. I owned the entire UI layer (start, selection, pause, victory, and game-over screens, plus the HP, Insanity, and Fuel bars), the artifact system and its dynamic selection panels, and the game audio across menus, items, keys, and the Warden.',
+                    challenge: 'Building a cohesive game across a four-person team meant many systems, AI, movement, UI, audio, level design, had to interlock cleanly. On my side, the artifact system had to dynamically alter player and Warden behavior (speed, jump, sight, insanity) while keeping the UI in sync in real time.',
+                    outcome: 'A fully playable 3D escape game with a complete gameplay loop, six unique artifacts, NavMesh-driven enemy AI, and polished UI and audio. Built with Eric Urban, Ohm Rathod, and Paul Scheeler.'
                 },
                 pitch: {
                     title: 'Pitch Guesser',
