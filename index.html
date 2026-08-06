@@ -215,21 +215,22 @@
 
                 <article class="project-card">
                     <div class="project-media">
-                        <img src="projects/img/vampire.png" alt="Vampire Survive game" loading="lazy">
+                        <img src="projects/img/kontagion.png" alt="Kontagion arena game" loading="lazy">
                     </div>
                     <div class="project-body">
-                        <h3 class="project-title">Vampire Survive</h3>
-                        <p class="project-desc">A C++ arena survival game where the player outlasts
-                            vampires. Built with object-oriented design across multiple interacting
-                            classes.</p>
+                        <h3 class="project-title">Kontagion</h3>
+                        <p class="project-desc">A C++ arena game where Socrates circles a petri dish
+                            spraying bacteria that spawn in the center. Compiled to WebAssembly so it
+                            runs right in the browser.</p>
                         <ul class="project-tags">
                             <li>C++</li>
                             <li>OOP</li>
-                            <li>Data Structures</li>
+                            <li>OpenGL</li>
+                            <li>WebAssembly</li>
                         </ul>
                         <div class="project-links">
-                            <button type="button" class="case-study-btn" data-case="vampire"><i class="fa-solid fa-book-open"></i> Read more</button>
-                            <a href="https://github.com/bkcaleb/Class_Projects/tree/main/CS32/project%201" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                            <button type="button" class="case-study-btn" data-case="kontagion"><i class="fa-solid fa-book-open"></i> Read more</button>
+                            <a href="https://bkcaleb.github.io/kontagion-demo/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-play"></i> Play</a>
                         </div>
                     </div>
                 </article>
@@ -641,13 +642,13 @@
                     challenge: 'Working within the memory and processing limits of an Arduino meant carefully managing how audio and the interface ran together on constrained hardware.',
                     outcome: 'The finished device won 2nd place in the IEEE Open Project Space competition. A video walkthrough of it in action is linked on the card.'
                 },
-                vampire: {
-                    title: 'Vampire Survive',
-                    meta: 'UCLA CS32 · C++',
-                    problem: 'The goal was to design a playable survival game entirely in C++, using it as a vehicle to practice clean object-oriented architecture rather than reaching for a game engine.',
-                    approach: 'The player moves around an arena trying to avoid and outlast vampires. I modeled the game as a set of interacting objects, a Player, Vampire, Arena, and History, each with clear responsibilities, so movement, collision, and game state stayed decoupled and easy to reason about.',
-                    challenge: 'The trickiest part was managing the relationships and state between many moving actors without the classes becoming tangled. Careful separation of responsibilities across the Player, Vampire, Arena, and History classes kept the logic maintainable as the ruleset grew.',
-                    outcome: 'A complete, playable C++ arena survival game that demonstrates object-oriented design, encapsulation, and data-structure fundamentals. The source is available on GitHub.'
+                kontagion: {
+                    title: 'Kontagion',
+                    meta: 'C++ · OpenGL · WebAssembly',
+                    problem: 'Kontagion is an arena game where the player, Socrates, moves around the rim of a circular petri dish and sprays to destroy bacteria (E. coli, salmonella, and fungus) that spawn and multiply in the center. The goal was to implement the full game logic in C++ with clean object-oriented design.',
+                    approach: 'I built the game around a hierarchy of actor classes, Socrates, the bacteria types, projectiles (spray and flame), food, pits, and goodies, each managing its own state and behavior. I implemented movement around the circle, collision detection, bacteria AI and reproduction, health and spray/flame resource management, and multiple levels of increasing difficulty.',
+                    challenge: 'To make it playable on the web, I compiled the C++ (which uses an OpenGL/GLUT rendering framework) to WebAssembly with Emscripten. That meant porting the legacy immediate-mode OpenGL rendering to WebGL, fixing texture formats (WebGL rejects the BGR sprite data the desktop build used) and filtering so the sprites render correctly in the browser.',
+                    outcome: 'A browser preview that shows roughly how the game looks and plays, running the original C++ logic in WebAssembly. It can\'t show the whole thing due to WebAssembly limitations (the HUD, spray sprite, and sound don\'t carry over), but the full game logic runs underneath. Click Play to try it: move Socrates with the arrow keys and spray with space. The build ships as a compiled binary, so the game runs without exposing the source code.'
                 },
                 carplate: {
                     title: 'Car Plate Detector',
