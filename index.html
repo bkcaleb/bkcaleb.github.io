@@ -186,6 +186,7 @@
                         </ul>
                         <div class="project-links">
                             <button type="button" class="case-study-btn" data-case="ruinescape"><i class="fa-solid fa-book-open"></i> Read more</button>
+                            <a href="https://bkcaleb.github.io/ruinescape-demo/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-play"></i> Play</a>
                         </div>
                     </div>
                 </article>
@@ -277,20 +278,25 @@
 
                 <article class="project-card">
                     <div class="project-media">
-                        <img src="projects/img/emergency.jpg" alt="Emergency 911 detector project" loading="lazy">
+                        <img src="projects/img/emergency.jpg" alt="Emergency action localization project" loading="lazy">
                     </div>
                     <div class="project-body">
-                        <h3 class="project-title">Emergency Detector</h3>
-                        <p class="project-desc"><strong>Golden time is the key.</strong> A camera-based
-                            system that detects emergency-worthy movements, like falling down the
-                            stairs, and alerts 911 instantly.</p>
+                        <h3 class="project-title">Emergency Action Localization</h3>
+                        <p class="project-desc"><strong>Golden time is the key.</strong> A deep-learning
+                            study comparing ST-GCN and transformer-based models at recognizing
+                            emergency actions in video, so a system could detect a collapse and call
+                            911 faster.</p>
                         <ul class="project-tags">
-                            <li>Python</li>
+                            <li>Deep Learning</li>
                             <li>Computer Vision</li>
-                            <li>Machine Learning</li>
+                            <li>Pose Estimation</li>
+                            <li>ST-GCN</li>
+                            <li>Transformers</li>
                         </ul>
                         <div class="project-links">
                             <button type="button" class="case-study-btn" data-case="emergency"><i class="fa-solid fa-book-open"></i> Read more</button>
+                            <a href="https://ucladeepvision.github.io/CS188-Projects-2023Winter/2023/01/29/team22-action-localization.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i> Article</a>
+                            <a href="https://www.youtube.com/watch?v=1UiqdXFNhrk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> Video</a>
                         </div>
                     </div>
                 </article>
@@ -659,12 +665,12 @@
                     outcome: 'A working pipeline that detects and reads license plates from images, the kind of foundation used in parking, tolling, and security systems.'
                 },
                 emergency: {
-                    title: 'Emergency Detector',
-                    meta: 'Computer Vision · Machine Learning · Python',
-                    problem: 'In an emergency like a fall, the "golden time", the first moments when help matters most, is often lost because no one is there to react. We wanted a system that could recognize a crisis and respond on its own.',
-                    approach: 'We built a camera-based system that watches for movements that look emergency-worthy, such as a person falling down the stairs, and, on detecting one, alerts 911 instantly without waiting for a human to notice.',
-                    challenge: 'The hard problem is telling a genuine emergency apart from ordinary motion, you want to catch a real fall while avoiding false alarms that would erode trust in the system.',
-                    outcome: 'A proof-of-concept that turns a passive camera into an active safety monitor, detecting emergency movements and triggering an instant 911 alert to protect that critical golden time.'
+                    title: 'Emergency Action Localization',
+                    meta: 'UCLA CS188 · Deep Learning for Computer Vision · 2023',
+                    problem: 'In an emergency like a medical collapse or robbery, the "golden time", the first moments when help matters most, is often lost because no one is watching to react. If a model constantly monitoring a security camera could recognize an emergency action fast, it could call 911 sooner than any human. We set out to study how well action-localization models handle these emergency situations.',
+                    approach: 'We worked with temporal action localization, which detects and timestamps human actions in video using 18 pose keypoints. We compared two models, a Spatiotemporal Graph Convolutional Network (ST-GCN) and an ST-GCN augmented with transformers, measuring their performance on the THUMOS14 dataset, then used the NTU RGB+D dataset to reason about how the transformer variant would perform on emergency-relevant actions.',
+                    challenge: 'The core question was whether transformers meaningfully improve action localization, and evaluating that fairly across datasets (general actions vs. emergency-relevant ones) with limited emergency-specific data. Recognizing a genuine emergency quickly, without false alarms, is what makes such a system trustworthy.',
+                    outcome: 'We found that adding transformers improved the model\'s action-localization performance. The project, done with Rohan Rao, was published as a write-up for UCLA\'s CS188 Deep Learning for Computer Vision course; the article and a video walkthrough are linked on the card.'
                 },
                 freeforsale: {
                     title: 'Free for Sale',
